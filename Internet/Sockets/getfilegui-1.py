@@ -11,13 +11,13 @@ def onReturnKey():
 	showinfo('getfilegui-1', 'Download complete')
 
 box = Tk()
-labels = ['Server', 'Port', 'File']
+labels = ['Server', 'Post', 'File']
 content = {}
 for label in labels:
 	row = Frame(box)
 	row.pack(fill=X)
-	Lable(row, text==label, whdth=6).pack(side=LEFT)
-	entry = Entry(now)
+	Label(row, text=label, width=6).pack(side=LEFT)
+	entry = Entry(row)
 	entry.pack(side=RIGHT, expand=YES, fill=X)
 	content[label] = entry
 

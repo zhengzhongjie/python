@@ -27,6 +27,7 @@ def client(host, port, filename):
 	sock.send((filename + '\n').encode())
 	dropdir = os.path.split(filename)[1]
 	file = open(dropdir, 'wb')
+	print(dropdir)
 	while True:
 		data = sock.recv(blksz)
 		if not data: break
@@ -40,8 +41,9 @@ def serverthread(clientsock):
 	filename = sockfile.readline()[:-1]
 	try:
 		file = open(filename, 'rb')
+		print(filename)
 		while True:
-			bytes = file.read(bytes)
+			bytes = file.read(blksz)
 			if not bytes: break
 			sent = clientsock.send(bytes)
 			assert sent == len(bytes)

@@ -13,7 +13,7 @@ class GetfileForm(Form):
 
 	def onSubmit(self):
 		Form.onSubmit(self)
-		localdir   = self.content['local Dir?'].get()
+		localdir   = self.content['Local Dir?'].get()
 		portnumber = self.content['Port Number'].get()
 		servername = self.content['Server Name'].get()
 		filename   = self.content['File Name'].get()

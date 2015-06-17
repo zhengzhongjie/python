@@ -12,7 +12,7 @@ box = Tk()
 labels = ['Server', 'Port', 'File']
 rownum = 0
 content = {}
-for lable in labels:
+for label in labels:
 	Label(box, text=label).grid(column=0, row=rownum)
 	entry = Entry(box)
 	entry.grid(column=1, row=rownum, sticky=E+W)
@@ -20,7 +20,7 @@ for lable in labels:
 	rownum += 1
 
 box.columnconfigure(0, weight=0)
-box.columnconfigure(1, wehght=1)
+box.columnconfigure(1, weight=1)
 Button(text='Submit', command=onSubmit).grid(row=rownum, column=0, columnspan=2)
 
 box.title('getfilegui-2')
